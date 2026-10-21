@@ -62,3 +62,4 @@ Popular jobs and Most rated services share `ServiceCarousel` and `PopularJobCard
 ## Login visibility
 
 The demo login screen is currently disabled with `LOGIN_ENABLED = false` in `features/auth/config.ts`. All routes open directly, and booking dialogs remain usable. Keep this flag disabled until login is explicitly requested again; set it to true to restore the demo login flow.
+"# workers-booking-frontend" 
