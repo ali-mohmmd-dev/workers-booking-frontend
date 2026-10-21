@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112"><defs>
+  <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a06ad7"/><stop offset=".5" stop-color="#532185"/><stop offset="1" stop-color="#3b175f"/></linearGradient>
+  <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset=".5" stop-color="#f4d8f5"/><stop offset="1" stop-color="#d57dd8"/></linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2=".6"><stop stop-color="#f8fafc"/><stop offset=".4" stop-color="#cbd5e1"/><stop offset=".65" stop-color="#94a3b8"/><stop offset="1" stop-color="#e2e8f0"/></linearGradient>
+  <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#592a89"/><stop offset="1" stop-color="#241a2f"/></linearGradient>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#271c33" flood-opacity=".22"/></filter>
+</defs><g filter="url(#shadow)" transform="rotate(-12 58 55)">
+  <path d="M80 35h11v22c0 6-4 10-10 10H60v12" fill="none" stroke="#6a369e" stroke-width="7" stroke-linecap="round"/>
+  <path d="M80 34h11v22c0 5-4 9-10 9H60" fill="none" stroke="#e0d0f0" stroke-width="3" stroke-linecap="round"/>
+  <rect x="21" y="20" width="62" height="31" rx="10" fill="url(#green)"/>
+  <ellipse cx="25" cy="35.5" rx="7" ry="14.5" fill="#b48bdd"/><ellipse cx="80" cy="35.5" rx="6" ry="14.5" fill="#3b175f"/>
+  <path d="M35 25h35" stroke="#d1b6ec" stroke-width="4" opacity=".75" stroke-linecap="round"/>
+  <rect x="49" y="74" width="21" height="29" rx="8" fill="url(#dark)"/>
+  <path d="M54 81v13" stroke="#955fcc" stroke-width="3" stroke-linecap="round"/>
+  </g><path d="M28 71s-7 9-7 12a7 7 0 0 0 14 0c0-3-7-12-7-12Z" fill="url(#mint)"/></svg>

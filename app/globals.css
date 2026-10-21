@@ -1,0 +1,132 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "./components.css";
+
+/* Shared design tokens. Component styling lives in components.css using Tailwind @apply. */
+:root {
+  color-scheme: light;
+  --green: rgb(19, 165, 77);
+  --dark-green: rgb(5, 121, 50);
+  --ink: rgb(19, 35, 8);
+  --muted: #71827a;
+  --line: #e1ebe3;
+  --cream: #FFF;
+  --pale: #eef7f0;
+  --page-max: 1180px;
+  --page-gutter: 5vw;
+  --page-gutter-mobile: 20px;
+  --control-height: 44px;
+  --nav-blur: 22px;
+  --nav-surface: linear-gradient(100deg, rgb(19 165 77 / .10) 0%, rgb(255 255 255 / .70) 24%, rgb(255 255 255 / .58) 75%, rgb(19 165 77 / .18) 100%);
+  --radius-card: 20px;
+  --category-mobile-width: 78px;
+  --service-mobile-width: 182px;
+  --category-mobile-height: 88px;
+  --category-mobile-art: 42px;
+  --radius-control: 10px;
+  --radius-photo-card: 25px;
+  --section-space: 44px;
+  --gradient-service: linear-gradient(360deg, rgba(18,100,64,.94) 0%, rgba(18,100,64,.72) 26%, transparent 60%);
+  --shadow-photo-card: 0 8px 18px rgb(18 100 64 / .18);
+  --avatar-shadow-color: #1c8a5525;
+  --shadow-avatar: 0 2px 10px var(--avatar-shadow-color);
+  --notification: #ec765c;
+  --button-shadow-color: #1c8a5528;
+  --shadow-button: 0 5px 12px var(--button-shadow-color);
+  --danger: #c15e50;
+  --callout: #e4f3e7;
+  --hover-border: #a9d1b3;
+  --cleaning-ink: #188459;
+  --cleaning-surface: #e3f5e9;
+  --plumbing-ink: #4587a4;
+  --plumbing-surface: #e5f1f5;
+  --electrical-ink: #b17b35;
+  --electrical-surface: #fff1d9;
+  --moving-ink: #796da5;
+  --moving-surface: #eeeafb;
+  --painting-ink: #bc765e;
+  --painting-surface: #fce8e0;
+  --repair-ink: #ae6170;
+  --repair-surface: #fbe6eb;
+  --status-completed: #56806a;
+  --status-cancelled: #ba6258;
+  --rating: #e2a440;
+  --auth-surface: #dceddf;
+  --auth-art-background: var(--auth-surface)
+
+    url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85")
+
+    center/cover;
+  --auth-gradient-start: rgba(15, 70, 40, 0.88);
+  --auth-gradient-end: rgba(25, 122, 76, 0.58);
+  --auth-art-overlay: linear-gradient(
+
+    135deg,
+
+    var(--auth-gradient-start),
+
+    var(--auth-gradient-end)
+
+  );
+  --auth-highlight: #b9e8c8;
+  --auth-copy: #d7f0de;
+  --auth-note: #d5f2dd;
+  --input-surface: #fbfdfb;
+  --modal-shadow-color: #07180d45;
+  --shadow-modal: 0 25px 80px var(--modal-shadow-color);
+  --divider-ink: #a0aaa4;
+  --demo-ink: #9aa69e;
+  --danger-text: #bf5c50;
+  --modal-backdrop: #10271c88;
+  --upload-border: #b9d5bf;
+  --upload-surface: #f5fbf6;
+  --toast-shadow-color: #0002;
+  --shadow-toast: 0 8px 20px var(--toast-shadow-color);
+  --glass-surface: rgba(255, 255, 255, .42);
+  --glass-border: rgba(255, 255, 255, .78);
+  --glass-shadow-color: rgba(23, 50, 42, .14);
+  --glass-highlight: rgba(255, 255, 255, .7);
+  --shadow-glass: 0 10px 35px var(--glass-shadow-color), inset 0 1px 0 var(--glass-highlight);
+  --nav-muted: #58615d;
+  --glass-hover: rgba(255, 255, 255, .25);
+  --gradient-action: linear-gradient(145deg, var(--green), var(--dark-green));
+  --glass-button-border: rgba(255, 255, 255, .35);
+  --action-shadow-color: rgba(28, 138, 85, .2);
+  --shadow-action: 0 8px 20px var(--action-shadow-color), inset 0 1px 0 var(--glass-hover);
+  --action-hover-shadow-color: rgba(28, 138, 85, .3);
+  --shadow-action-hover: 0 10px 24px var(--action-hover-shadow-color);
+  --tile-shadow-color: #17322a05;
+  --shadow-tile: 0 3px 12px var(--tile-shadow-color);
+  --tile-active-shadow-color: #1c8a5526;
+  --shadow-tile-active: 0 6px 16px var(--tile-active-shadow-color);
+  --illustration-surface: #e0f4e7;
+}
+
+@theme inline {
+  --font-sans: var(--font-figtree);
+  --color-primary: var(--green);
+  --color-primary-foreground: #fff;
+  --color-background: var(--cream);
+  --color-foreground: var(--ink);
+  --color-border: var(--line);
+  --color-muted-foreground: var(--muted);
+  --color-primary-dark: var(--dark-green);
+  --color-surface-soft: var(--pale);
+  --radius-lg: var(--radius-card);
+}
+
+@layer base {
+  body { @apply m-0 bg-background font-sans text-foreground; }
+  h1, h2, h3, h4, h5, h6 { @apply font-semibold; }
+  button { @apply cursor-pointer; }
+  button:disabled { @apply cursor-default; }
+  img { @apply block; }
+  a { @apply no-underline; }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --section-space: 10px;
+  }
+}
